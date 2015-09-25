@@ -1,0 +1,20 @@
+.details {
+  border: 1px solid black;
+  margin: 0px;
+}
+
+.details-body {
+  height: 50px;
+  border-top: 1px solid black;
+}
+
+.details-heading {
+  height: 50px;
+}
+
+.premises {
+}
+
+.app{
+  margin: 20px;
+}

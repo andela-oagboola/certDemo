@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="/libraries/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+
+    <body>
+        <div class="row app">
+            <table id="equipments" class="table-bordered">
+                <thead>
+                    <tr>
+                        <th>Certificate No.</th>
+                        <th>Client</th>
+                        <th>Date of Examination</th>
+                        <th>Date of Next Examination</th>
+                        <th>Type</th>
+                        <th>Examiner</th>
+                        <th>Verdict</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document" style="width:60%">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered" id="cert-table1">
+                                <thead>
+                                    <tr>
+                                        <th>Certificate No.</th>
+                                        <th>Date of Examination</th>
+                                        <th>Examiner</th>
+                                        <th>Qualifications</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="cert-num"></td>
+                                        <td id="doe"></td>
+                                        <td id="examiner"></td>
+                                        <td id="qualifications"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <table class="table table-bordered" id="cert-table2">
+                                <thead>
+                                    <tr>
+                                        <th>Equipment ID(s)</th>
+                                        <th>Qty</th>
+                                        <th>Description of Equipment</th>
+                                        <th>Tare WT</th>
+                                        <th>SWL</th>
+                                        <th>Gross WT</th>
+                                        <th>Proof of Load Applied</th>
+                                        <th>Date of Next examination</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                            <div class="row details">
+                              <div class="col-md-6 details-heading" style="border-right: 1px solid;">Name and Address of Equipment Owner</div>
+                              <div class="col-md-6 details-heading">Address of Premises where tests/Examination was held</div>
+                              <div class="col-md-6 details-body" style="border-right: 1px solid;" id="address-name"></div>
+                              <div class="col-md-6 details-body premises" id="address-premises"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="libraries/jquery-2.1.4.min.js"></script>
+        <script src="/libraries/moment.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="/libraries/loadash.js"></script>
+        <script type="text/javascript" src="js/appdb.js"></script>
+        <script src="/libraries/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
